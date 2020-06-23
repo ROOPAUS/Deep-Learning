@@ -18,11 +18,67 @@ Input layer, Hidden layer/layers, Output Layer
 
 #### Different types of activation functions:
 
-- Sigmoid function
+- Sigmoid function : Used when model is predicting probability.
 
-- Threshold function
+- Threshold function : Used when output depends on a threshold value.
 
-- ReLU ( Rectified Linear Unit)
+- ReLU ( Rectified Linear Unit) : Gives an output if X is positive, else 0
 
-- Hyperbolic Tangent Function
+- Hyperbolic Tangent Function : Similar to sigmoid function, but has range from -1 to 1
+
+#### In case of error:
+
+- Error in the output is back propagated through the network and weights are adjusted to minimize the error rate. This is calculated by a cost function
+
+- Output is compared with the original result and multiple iterations are done to get the maximum accuracy.
+
+- With every iteration, weights at each interconnection are adjusted based on the error
+
+### Types of neural networks:
+
+- Feed Forward Neural Network : Data travels only in 1 direction. Used in speech and vision applications.
+
+- Radial Basis Function Neural Network : Classifies data point based on center point. Used in power restoration systems.
+
+- Kohonen Self-organizing Neural Network : Vectors of random input are input to discrete map consisting of neurons . Used in medical analysis for pattern recognition.
+
+- Recurrent Neural Network : Hidden layer saves its output to be used in future predictions. Used in text to speech conversions.
+
+- Convolutional Neural Network : Input features are taken in batches - like passing through a filter - to remember image in parts. Used in facial recognition.
+
+- Modular NN : Combination of different NN. Still in research phase
+
+### Why deep learning is so transformative?
+
+- No need of feature engineering or extraction
+
+- High performance compared to other models for large datasets
+
+- Works for both structured and unstructured data
+
+### Libraries used for deep learning projects:
+
+- TensorFlow( by Google Brain)
+
+- Keras ( built on top of tensorflow)
+
+- Theano ( an academic project - tightly integrated with Numpy)
+
+- CNTK (by microsoft)
+
+- Caffe (by Facebook)
+
+- PyTorch (by Facebook)
+
+- MxNet ( supported by major cloud providers such as AWS and Azure)
+
+- CuDNN (CUDA DNN)
+
+- deeplearning4j ( distributed DNN for java virtual machines)
+
+
+
+Credits -These notes are referred from simplilearn content and from various other blogs
+
+
 
