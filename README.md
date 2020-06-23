@@ -10,11 +10,19 @@ Input layer, Hidden layer/layers, Output Layer
 
 - Output Layer : Delivers the final result
 
-The interconnections/channels are assigned weights at random
+- The interconnections/channels are assigned weights at random
 
-These weights are multiplied with the input signal ( nodes or activations)
+- These weights are multiplied with the input signal ( nodes or activations). Finally bias is added to this weighted sum 
 
-Finally bias is added to this weighted sum 
+- This weighted sum is calculated and fed to activation function in each layer to decide which nodes to fire
 
-This weighted sum is calculated and fed to activation function in each layer to decide which nodes to fire
+#### Different types of activation functions:
+
+- Sigmoid function
+
+- Threshold function
+
+- ReLU ( Rectified Linear Unit)
+
+- Hyperbolic Tangent Function
 
