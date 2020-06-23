@@ -34,6 +34,12 @@ Input layer, Hidden layer/layers, Output Layer
 
 - With every iteration, weights at each interconnection are adjusted based on the error
 
+### Actual working of a deep learning model
+
+#### What is a tensor?
+
+- Simply put, tensor is a block of numbers. It can be in 0 dimensional (i.e a single number), 1D (a list), 2D(matrix) or N-dimensional block.
+
 ### Types of neural networks:
 
 - Feed Forward Neural Network : Data travels only in 1 direction. Used in speech and vision applications.
