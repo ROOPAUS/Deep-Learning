@@ -4,17 +4,21 @@
 #### Contains 3 layers : 
 Input layer, Hidden layer/layers, Output Layer
 
-- Input Layer : Picks up input signals and passes it to next layer
+- Input Layer : Picks up input signals and passes it to next layer. It is a buffer where input value sits. No processing is done here.
 
 - Hidden Layer/layers : Does calculation and feature extraction
 
-- Output Layer : Delivers the final result
+- Output Layer : Delivers the final result. Unlike input layer, the output layer has computation.
 
 - The interconnections/channels are assigned weights at random
 
 - These weights are multiplied with the input signal ( nodes or activations). Finally bias is added to this weighted sum 
 
-- This weighted sum is calculated and fed to activation function in each layer to decide which nodes to fire
+- This weighted sum is calculated and fed to activation function in each layer to decide which nodes to fire. 
+
+#### Why do we need this activation function?
+
+- Each hidden layer is actually the weighted sum of the previous layer. Without activation function present, the output that we get after all the processing time is all just addition. That means, we can remove all the hidden layers, it will be just input layer and output layer. But this isnt how the actual neuron works. Based on the threshold value the outgoing signal is determined and sent. Similarly, we can include activation functions in our model to determine what the output to the next layer should be, thus preventing possible collapse.
 
 #### Different types of activation functions:
 
@@ -26,6 +30,13 @@ Input layer, Hidden layer/layers, Output Layer
 
 - Hyperbolic Tangent Function : Similar to sigmoid function, but has range from -1 to 1
 
+#### Is softmax an activation function?
+
+- No, softmax is not exactly an activation function, but it almost serves the same purpose.
+
+- Softmax layer comes at the end of the classification network. The output values from the output neurons are output scores which are not probabilities. These scores are infact negative logarithm of likelihoods. Inorder to convert these scores to probabilities, the softmax layer is used ( i.e squishing the dynamic range from 0 to 1).
+
+
 #### In case of error:
 
 - Error in the output is back propagated through the network and weights are adjusted to minimize the error rate. This is calculated by a cost function
@@ -33,12 +44,6 @@ Input layer, Hidden layer/layers, Output Layer
 - Output is compared with the original result and multiple iterations are done to get the maximum accuracy.
 
 - With every iteration, weights at each interconnection are adjusted based on the error
-
-### Actual working of a deep learning model
-
-#### What is a tensor?
-
-- Simply put, tensor is a block of numbers. It can be in 0 dimensional (i.e a single number), 1D (a list), 2D(matrix) or N-dimensional block.
 
 ### Types of neural networks:
 
@@ -83,6 +88,17 @@ Input layer, Hidden layer/layers, Output Layer
 - deeplearning4j ( distributed DNN for java virtual machines)
 
 
+### Actual working of a deep learning model
+
+#### What is a tensor?
+
+- Simply put, tensor is a block of numbers. It can be in 0 dimensional (i.e a single number), 1D (a list), 2D(matrix) or N-dimensional block.
+
+#### Perceptron model
+
+- Actual neuron structure is very complex. In the simplest form, it can be shown as consisting of dendrites, nucleus inside cell body and synaptic terminals
+
+- The same can be modelled using numbers. Each input will have a value and a weight associated with. Product(value and weights) of all inputs are summed together and an additional bias is also added, to get an output (if >0, then 1, else -1). This is the perceptron model.
 
 Credits -These notes are referred from simplilearn content and from various other blogs
 
