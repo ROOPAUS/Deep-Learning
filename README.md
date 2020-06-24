@@ -1,6 +1,11 @@
 # Deep-Learning
 ## Basic idea of neural network:
 
+#### Perceptron model
+
+- Actual neuron structure is very complex. In the simplest form, it can be shown as consisting of dendrites, nucleus inside cell body and synaptic terminals
+
+- The same can be modelled using numbers. Each input will have a value and a weight associated with. Product(value and weights) of all inputs are summed together and an additional bias is also added, to get an output (if >0, then 1, else -1). This is the perceptron model.
 #### Contains 3 layers : 
 Input layer, Hidden layer/layers, Output Layer
 
@@ -108,17 +113,12 @@ Input layer, Hidden layer/layers, Output Layer
 - deeplearning4j ( distributed DNN for java virtual machines)
 
 
-### Actual working of a deep learning model
+### Actual implementation of a deep learning model
 
 #### What is a tensor?
 
 - Simply put, tensor is a block of numbers. It can be in 0 dimensional (i.e a single number), 1D (a list), 2D(matrix) or N-dimensional block.
 
-#### Perceptron model
-
-- Actual neuron structure is very complex. In the simplest form, it can be shown as consisting of dendrites, nucleus inside cell body and synaptic terminals
-
-- The same can be modelled using numbers. Each input will have a value and a weight associated with. Product(value and weights) of all inputs are summed together and an additional bias is also added, to get an output (if >0, then 1, else -1). This is the perceptron model.
 
 Credits -These notes are referred from simplilearn content and from various other blogs
 
