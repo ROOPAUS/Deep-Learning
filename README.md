@@ -37,7 +37,7 @@ Input layer, Hidden layer/layers, Output Layer
 - Softmax layer comes at the end of the classification network. The output values from the output neurons are output scores which are not probabilities. These scores are infact negative logarithm of likelihoods. Inorder to convert these scores to probabilities, the softmax layer is used ( i.e squishing the dynamic range from 0 to 1).
 
 
-#### In case of error:
+#### Gradient Descent:
 
 - The predicted value is compared with the actual label using error formula or loss formula
 
@@ -45,7 +45,19 @@ Input layer, Hidden layer/layers, Output Layer
 
 - #### loss = [(actual output)-(predicted output)]^2
 
-- Here, inorder to get the most accurate output, the loss should be minimum ( 0 in ideal case). So how do we find an input that minimizes the value of a function? In calculus, we use the 
+- Here, inorder to get the most accurate output, the loss should be minimum ( 0 in ideal case). So how do we find an input that minimizes the value of a function? In calculus, we use the derivates to find the minima of a function explicitly( where slope= 0 and second derivative>0). But in complex functions in deep learning, involving large number of inputs, this method is not feasible.
+
+- In this case, we plot a graph of weight versus loss. A random point on this curve is chosen and the slope at this point is calculated.
+
+- Shift the input to the left if the slope is positive, i.e a positive slope indicates an increase in weight.
+
+- Shift the input to the right if the slope is negative, i.e a negative slope indicates a decrease in weight.
+
+- A zero slope indicates the appropriate weight. Our aim is to reach a point where the slope is zero.
+
+- This method of finding minimum of a function is known as the #### gradient descent.
+
+#### Back Propagation:
 
 - Error in the output is back propagated through the network and weights are adjusted to minimize the error rate. This is calculated by a cost function
 
