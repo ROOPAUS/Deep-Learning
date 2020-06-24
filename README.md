@@ -106,7 +106,7 @@ This is similar to normal momentum update. The only difference is in the gradien
 
 In normal momentum, at every time step the velocity is updated according to the local gradient and is then applied to the parameters.
 
-That is, [v <sub>(t+1)</sub> = (\gamma * v) - (\eta * local gradient)]. Then we calculate C as [(\theta + v<sub>(t+1)</sub>)] . Here local gradient refers to gradient at B and \theta is the parameters of B referring to weights and bias at B
+That is, [v <sub>(t+1)</sub> = ($\gamma$ * v) - ($\eta$ * local gradient)]. Then we calculate C as [($\theta$ + v<sub>(t+1)</sub>)] . Here local gradient refers to gradient at B and $\theta$ is the parameters of B referring to weights and bias at B
 
 But in Nestorov Momentum
 
