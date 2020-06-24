@@ -122,6 +122,16 @@ Input layer, Hidden layer/layers, Output Layer
 
 - It is the weights and bias that change, so they are parameters. The learning rate and momentum are set these and then train, again set and then train in a repeated fashion and hence are called hyperparameters.
 
+#### Convergence - an open ended question!
+
+- A model converges when its loss actually moves towards a minima (local or global) with a decreasing trend ( meaning it properly responds to inputs)
+
+- The hyperparameters all help in minimizing the loss and helps the system correctly predict the output. But is the system strictly converging?
+
+- The answer is NO. Only by tweaking the hyperparameters again and again, we reach a minimal loss. Therefore, except for the single perceptron model with a single neuron, convergence is not seen in any of these networks.
+
+- It is using tweaking and our own sense of judgement that we finally reach a minimal loss stage.
+
 ### Types of neural networks:
 
 - Feed Forward Neural Network : Data travels only in 1 direction. Used in speech and vision applications.
