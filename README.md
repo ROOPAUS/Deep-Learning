@@ -6,7 +6,9 @@
 - Actual neuron structure is very complex. In the simplest form, it can be shown as consisting of dendrites, nucleus inside cell body and synaptic terminals
 
 - The same can be modelled using numbers. Each input will have a value and a weight associated with. Product(value and weights) of all inputs are summed together and an additional bias is also added, to get an output (if >0, then 1, else -1). This is the perceptron model.
-#### Contains 3 layers : 
+
+#### Structure of a neural network:
+
 Input layer, Hidden layer/layers, Output Layer
 
 - Input Layer : Picks up input signals and passes it to next layer. It is a buffer where input value sits. No processing is done here.
