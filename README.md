@@ -55,7 +55,7 @@ Input layer, Hidden layer/layers, Output Layer
 
 - A zero slope indicates the appropriate weight. Our aim is to reach a point where the slope is zero.
 
-- This method of finding minimum of a function is known as the #### gradient descent.
+- This method of finding minimum of a function is known as the gradient descent.
 
 #### Back Propagation:
 
