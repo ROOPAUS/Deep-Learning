@@ -90,13 +90,26 @@ Input layer, Hidden layer/layers, Output Layer
 
 - Another way to do it is to use momentum or inertia instead of normal gradient descent
 
-- The momentum(i.e the change that brought us to A) to reach a point A (lets say m) is scaled up by a temporal or time element denoted by gamma. (Gamma value range from 0 to 1, 0.9 being the one usually used). Now we reach point B
+#### Momentum:
 
-- We find the gradient of point B and scale it using learning rate . And then we add the previous (gamma * m)
+- The velocity to reach a point A (lets say v) is scaled up by a temporal or time element denoted by gamma. (Gamma value range from 0 to 1, 0.9 being the one usually used). Now we reach point B. This v* gamma is the momentum.
+
+- We find the gradient of point B and scale it using learning rate . And then we add the previous momentum (i.e gamma * v)
 
 - This is almost like adding the previous gradient to the present gradient (not exactly the same, but easier to grasp the concept)
 
 - The momentum and learning rates are "set" by trial and error. It depends on our data and our network.
+
+#### Nestorov Momentum (Nesterov Accelerated Gradient NAG):
+
+This is similar to normal momentum update. The only difference is in the gradient used in both of these.
+
+In normal momentum, at every time step the velocity is updated according to the local gradient and is then applied to the parameters.
+
+That is, [v <sub>(t+1)</sub> = (gamma * v) - (eta * local gradient)]. Then we calculate C as [(parameters of B + v<sub>(t+1)</sub>)] . Here local gradient refers to gradient at B and parameters of B refers to weights and bias at B
+
+But in Nestorov Momentum
+
 
 #### Hyperparameters:
 
@@ -153,6 +166,7 @@ Input layer, Hidden layer/layers, Output Layer
 
 
 Credits -These notes are referred from simplilearn content and from various other blogs
+https://dominikschmidt.xyz/nesterov-momentum/
 
 
 
