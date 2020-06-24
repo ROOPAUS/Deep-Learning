@@ -39,6 +39,10 @@ Input layer, Hidden layer/layers, Output Layer
 
 #### In case of error:
 
+- The predicted value is compared with the actual label using error formula or loss formula
+
+- #### Loss function : It is the measurement of error which defines the precision lost when comparing predicted output to the actual output. Simply put, loss function is the loss of accuracy.
+
 - Error in the output is back propagated through the network and weights are adjusted to minimize the error rate. This is calculated by a cost function
 
 - Output is compared with the original result and multiple iterations are done to get the maximum accuracy.
