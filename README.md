@@ -66,11 +66,41 @@ Input layer, Hidden layer/layers, Output Layer
 
 #### Back Propagation:
 
-- Error in the output is back propagated through the network and weights are adjusted to minimize the error rate. This is calculated by a cost function
+- In simple terms, backpropagation is informing the weights about gradient. And the actual changing of weights to minimize the loss is done in the gradient descent i.e decreasing the gradient of the loss.
+
+- Gradient(not the error) in the output is back propagated through the network and weights are adjusted to minimize the error rate. This is calculated by a cost function
 
 - Output is compared with the original result and multiple iterations are done to get the maximum accuracy.
 
 - With every iteration, weights at each interconnection are adjusted based on the error
+
+- To summarize, we start at inputs, generate output. We will have errors. We are going to use back propagation to push the error gradient all the way back telling all the weights how it should move and we will adjust the weights up or down.
+
+#### Learning rate:
+
+- The size of step that we take to adjust the weights is known as the learning rate ( denoted by eta)
+
+- For a error curve with a single minimum point, learning rate can be used without any hassle.
+
+- But imagine, for a curve with ups and downs, the learning rate makes the gradient go downhill to the first minimum and settles. If we give a large learning rate, it can overshoot to the next uphill directly without moving down the hill (i.e we may end overshooting the global minimum). This is not the proper way to do it.
+
+- So, one thing we can do is the "decay schedule"
+
+- #### Decay schedule involves decreasing the learning rate after each epoch (Epoch refers to one pass of the training loop)
+
+- Another way to do it is to use momentum or inertia instead of normal gradient descent
+
+- The momentum(i.e the change that brought us to A) to reach a point A (lets say m) is scaled up by a temporal or time element denoted by gamma. (Gamma value range from 0 to 1, 0.9 being the one usually used). Now we reach point B
+
+- We find the gradient of point B and scale it using learning rate . And then we add the previous (gamma * m)
+
+- This is almost like adding the previous gradient to the present gradient (not exactly the same, but easier to grasp the concept)
+
+- The momentum and learning rates are "set" by trial and error. It depends on our data and our network.
+
+#### Hyperparameters:
+
+- It is the weights and bias that change, so they are parameters. The learning rate and momentum are set these and then train, again set and then train in a repeated fashion and hence are called hyperparameters.
 
 ### Types of neural networks:
 
