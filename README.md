@@ -184,6 +184,11 @@ Input layer, Hidden layer/layers, Output Layer
 
 Credits -These notes are referred from simplilearn content and from various other blogs
 https://dominikschmidt.xyz/nesterov-momentum/
-
+https://www.youtube.com/watch?v=kPrHqQzCkg0
+https://www.youtube.com/watch?v=Ilg3gGewQ5U&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=3
+https://www.youtube.com/watch?v=odlgtjXduVg
+https://mlfromscratch.com/optimizers-explained/#/
+https://cs231n.github.io/neural-networks-3/#sgd
+https://www.youtube.com/watch?v=r0Ogt-q956I
 
 
