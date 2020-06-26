@@ -132,7 +132,7 @@ Input layer, Hidden layer/layers, Output Layer
 
 - It is using tweaking and our own sense of judgement that we finally reach a minimal loss stage.
 
-#### Underfitting and Overfitting:
+#### Overfitting:
 
 - We split the input data into 3 sets : training set, validation set amd test set
 
@@ -142,6 +142,21 @@ Input layer, Hidden layer/layers, Output Layer
 
 - This happens until we reach the accuracy we want. Then we bring out the test set and run through it. If it gives the same accuracy as validation set, then its fine, else we start all over again.
 
+- After running the training and validation sets many times, slowly the error curve for training set starts flattening out, but the error curve for validation set shoots up. This is because of overfitting. The model starts to learn tricks to reach the output directly sometimes giving wrong answer for another set of inputs. ( Eg: Puddle tail)
+
+#### Regularization:
+
+- To reduce overfitting, we use certain algorithms called Regularization algorithms
+
+- One of the most famous regularisation algorithm is dropout
+
+#### Dropout:
+
+- Suppose we have a set of neurons, and one of those is looking for a particular trait in the image, and when it sees that trait, it dominates and propagates through the network to give an output which sometimes can be wrong.
+
+- So to avoid this, at the beginning of each epoch, we randomly select a set of neurons and disconnect it from the network, so that they dont participate in the forward and backward progation and their weights also wont get updated. Then at the next epoch, we connect those neurons back and pick another set of neurons and disconnect them.This is done with different set of neurons each time.
+
+- This is a easy, simple to implement and fast out of all regularization algorithms.
 
 ### Types of neural networks:
 
