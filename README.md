@@ -132,6 +132,17 @@ Input layer, Hidden layer/layers, Output Layer
 
 - It is using tweaking and our own sense of judgement that we finally reach a minimal loss stage.
 
+#### Underfitting and Overfitting:
+
+- We split the input data into 3 sets : training set, validation set amd test set
+
+- In each epoch we train with the training data, and then run through the validation data ( which is the proxy for  test set)
+
+- To improve accuracy, we again train the training data and run through the validation data
+
+- This happens until we reach the accuracy we want. Then we bring out the test set and run through it. If it gives the same accuracy as validation set, then its fine, else we start all over again.
+
+
 ### Types of neural networks:
 
 - Feed Forward Neural Network : Data travels only in 1 direction. Used in speech and vision applications.
