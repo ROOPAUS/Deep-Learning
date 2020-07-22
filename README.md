@@ -217,4 +217,4 @@ https://mlfromscratch.com/optimizers-explained/#/
 https://cs231n.github.io/neural-networks-3/#sgd
 https://www.youtube.com/watch?v=r0Ogt-q956I
 
-
+HOG and PCA
